@@ -4,7 +4,8 @@ def safe_divide(numerator, denominator):
     try:
         numerator = float(numerator)
         denominator = float(denominator)
-        return numerator / denominator
+        result = numerator / denominator
+        return f"The result of the division is {result}"
     except ZeroDivisionError:
         return "Error: Cannot divide by zero."
     except ValueError:
@@ -15,5 +16,5 @@ if __name__ == "__main__":
         print("Usage: python robust_division_calculator.py <numerator> <denominator>")
         sys.exit(1)
 
-    result = safe_divide(sys.argv[1], sys.argv[2])
-    print(result)
+    output = safe_divide(sys.argv[1], sys.argv[2])
+    print(output)
