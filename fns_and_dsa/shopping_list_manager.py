@@ -16,7 +16,8 @@ def main():
             continue
 
         if choice == 1:
-            item = input("Enter item to add: ").strip()
+            item = input("Enter the item to add: ")
+            item = item.strip()
             if item:
                 shopping_list.append(item)
                 print(f"'{item}' added to the shopping list.")
@@ -24,7 +25,8 @@ def main():
                 print("Item name cannot be empty.")
 
         elif choice == 2:
-            item = input("Enter item to remove: ").strip()
+            item = input("Enter the item to remove: ")
+            item = item.strip()
             if item in shopping_list:
                 shopping_list.remove(item)
                 print(f"'{item}' removed from the shopping list.")
